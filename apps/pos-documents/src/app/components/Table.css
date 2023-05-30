@@ -1,0 +1,11 @@
+.header-row {
+    border-top: solid 1px #000;
+    border-bottom: solid 1px #000;
+}
+
+.text-bold {
+    font-weight: 700;
+}
+.no-padding {
+    padding: 0;
+}

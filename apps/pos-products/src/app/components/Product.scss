@@ -1,0 +1,22 @@
+.flex {
+    display: flex;
+}
+
+.product-item {
+    display: grid;
+    background-color: #fff;
+    color: black;
+    min-height: 140px;
+    margin: 2px;
+    padding: 20px;
+    text-align: center;
+}
+
+.product-item:hover {
+    background-color: #f5f5f5;
+    cursor: pointer;
+}
+
+.price-bold {
+    font-weight: bold;
+}

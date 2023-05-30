@@ -1,0 +1,199 @@
+{
+    "name": "pos-host",
+    "$schema": "../../node_modules/nx/schemas/project-schema.json",
+    "sourceRoot": "apps/pos-host/src",
+    "projectType": "application",
+    "targets": {
+        "build": {
+            "executor": "@nrwl/webpack:webpack",
+            "outputs": ["{options.outputPath}"],
+            "defaultConfiguration": "production",
+            "options": {
+                "compiler": "babel",
+                "outputPath": "dist/apps/pos-host",
+                "index": "apps/pos-host/src/index.html",
+                "baseHref": "/",
+                "main": "apps/pos-host/src/main.ts",
+                "tsConfig": "apps/pos-host/tsconfig.app.json",
+                "assets": [
+                    "apps/pos-host/src/favicon.ico",
+                    "apps/pos-host/src/assets"
+                ],
+                "styles": ["apps/pos-host/src/styles.scss"],
+                "scripts": [],
+                "isolatedConfig": true,
+                "webpackConfig": "apps/pos-host/webpack.config.js"
+            },
+            "configurations": {
+                "development": {
+                    "extractLicenses": false,
+                    "optimization": false,
+                    "sourceMap": true,
+                    "vendorChunk": true
+                },
+                "production": {
+                    "fileReplacements": [
+                        {
+                            "replace": "apps/pos-host/src/environments/environment.ts",
+                            "with": "apps/pos-host/src/environments/environment.prod.ts"
+                        }
+                    ],
+                    "optimization": true,
+                    "outputHashing": "all",
+                    "sourceMap": false,
+                    "namedChunks": false,
+                    "extractLicenses": true,
+                    "vendorChunk": false,
+                    "webpackConfig": "apps/pos-host/webpack.config.prod.js"
+                }
+            }
+        },
+        "serve": {
+            "executor": "@nrwl/react:module-federation-dev-server",
+            "defaultConfiguration": "development",
+            "options": {
+                "buildTarget": "pos-host:build",
+                "hmr": true,
+                "port": 4200
+            },
+            "configurations": {
+                "development": {
+                    "buildTarget": "pos-host:build:development"
+                },
+                "production": {
+                    "buildTarget": "pos-host:build:production",
+                    "hmr": false
+                }
+            }
+        },
+        "lint": {
+            "executor": "@nrwl/linter:eslint",
+            "outputs": ["{options.outputFile}"],
+            "options": {
+                "lintFilePatterns": ["apps/pos-host/**/*.{ts,tsx,js,jsx}"]
+            }
+        },
+        "test": {
+            "executor": "@nrwl/jest:jest",
+            "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+            "options": {
+                "jestConfig": "apps/pos-host/jest.config.ts",
+                "passWithNoTests": true
+            },
+            "configurations": {
+                "ci": {
+                    "ci": true,
+                    "codeCoverage": true
+                }
+            }
+        },
+        "serve-static": {
+            "executor": "@nrwl/web:file-server",
+            "defaultConfiguration": "development",
+            "options": {
+                "buildTarget": "pos-host:build",
+                "port": 4201
+            },
+            "configurations": {
+                "development": {
+                    "buildTarget": "pos-host:build:development"
+                },
+                "production": {
+                    "buildTarget": "pos-host:build:production"
+                }
+            }
+        },
+        "cap": {
+            "executor": "@nxext/capacitor:cap",
+            "options": {
+                "cmd": "--help"
+            }
+        },
+        "add": {
+            "executor": "@nxext/capacitor:cap",
+            "options": {
+                "cmd": "add"
+            },
+            "configurations": {
+                "ios": {
+                    "cmd": "add ios"
+                },
+                "android": {
+                    "cmd": "add android"
+                }
+            }
+        },
+        "copy": {
+            "executor": "@nxext/capacitor:cap",
+            "options": {
+                "cmd": "copy"
+            },
+            "configurations": {
+                "ios": {
+                    "cmd": "copy ios"
+                },
+                "android": {
+                    "cmd": "copy android"
+                }
+            }
+        },
+        "open": {
+            "executor": "@nxext/capacitor:cap",
+            "options": {
+                "cmd": "open"
+            },
+            "configurations": {
+                "ios": {
+                    "cmd": "open ios"
+                },
+                "android": {
+                    "cmd": "open android"
+                }
+            }
+        },
+        "run": {
+            "executor": "@nxext/capacitor:cap",
+            "options": {
+                "cmd": "run"
+            },
+            "configurations": {
+                "ios": {
+                    "cmd": "run ios"
+                },
+                "android": {
+                    "cmd": "run android"
+                }
+            }
+        },
+        "sync": {
+            "executor": "@nxext/capacitor:cap",
+            "options": {
+                "cmd": "sync"
+            },
+            "configurations": {
+                "ios": {
+                    "cmd": "sync ios"
+                },
+                "android": {
+                    "cmd": "sync android"
+                }
+            }
+        },
+        "update": {
+            "executor": "@nxext/capacitor:cap",
+            "options": {
+                "cmd": "update"
+            },
+            "configurations": {
+                "ios": {
+                    "cmd": "update ios"
+                },
+                "android": {
+                    "cmd": "update android"
+                }
+            }
+        }
+    },
+    "tags": [],
+    "implicitDependencies": ["pos-base"]
+}

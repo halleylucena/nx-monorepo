@@ -1,0 +1,12 @@
+.printer {
+    &__custom-input {
+        display: inline-block;
+        @media (max-width: 768px) {
+            display: block;
+        }
+    }
+}
+
+ion-toggle {
+    --background: #d7d8da;
+}

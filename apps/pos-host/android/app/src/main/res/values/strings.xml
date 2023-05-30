@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">posHost</string>
+    <string name="title_activity_main">posHost</string>
+    <string name="package_name">pt.vendus.posHost</string>
+    <string name="custom_url_scheme">pt.vendus.posHost</string>
+</resources>

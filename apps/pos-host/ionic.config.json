@@ -1,0 +1,7 @@
+{
+    "name": "posHost",
+    "integrations": {
+        "capacitor": {}
+    },
+    "type": "react"
+}
