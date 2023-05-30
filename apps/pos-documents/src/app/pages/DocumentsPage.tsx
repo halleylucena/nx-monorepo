@@ -257,7 +257,7 @@ const DocumentsPage: React.FC<props> = ({
                                         size="4"
                                         size-sm="auto"
                                     >
-                                        <IonTitle>{`${documentsQty.current} Documentss`}</IonTitle>
+                                        <IonTitle>{`${documentsQty.current} Documents`}</IonTitle>
                                     </IonCol>
                                 </>
                             ) : null}
