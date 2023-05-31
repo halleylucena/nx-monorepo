@@ -195,5 +195,5 @@
         }
     },
     "tags": [],
-    "implicitDependencies": ["pos-base"]
+    "implicitDependencies": ["pos-base", "pos-documents", "pos-products"]
 }
