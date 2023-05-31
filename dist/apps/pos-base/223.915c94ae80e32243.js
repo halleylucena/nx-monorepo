@@ -1,0 +1,1 @@
+(self.webpackChunkpos_base=self.webpackChunkpos_base||[]).push([[223],{2223:(e,n,u)=>{u.r(n),u.d(n,{ReactQueryDevtools:()=>s,ReactQueryDevtoolsPanel:()=>l});const s=function(){return null},l=function(){return null}}}]);

@@ -24,9 +24,9 @@ const prodConfig = {
      * ]
      */
     remotes: [
-        ['pos-base', 'http://localhost:4300/'],
-        ['pos-documents', 'http://localhost:4400/'],
-        ['pos-products', 'http://localhost:4500/'],
+        ['pos-base', 'https://pos-staging.vendus.pt/base'],
+        ['pos-documents', 'https://pos-staging.vendus.pt/documents'],
+        ['pos-products', 'https://pos-staging.vendus.pt/products'],
     ],
 };
 
