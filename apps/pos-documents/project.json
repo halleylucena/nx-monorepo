@@ -91,7 +91,8 @@
             "executor": "@nrwl/web:file-server",
             "defaultConfiguration": "development",
             "options": {
-                "buildTarget": "pos-documents:build"
+                "buildTarget": "pos-documents:build",
+                "port": 4400
             },
             "configurations": {
                 "development": {

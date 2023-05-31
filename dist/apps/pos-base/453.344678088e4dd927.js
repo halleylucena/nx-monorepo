@@ -1,1 +1,0 @@
-(self.webpackChunkpos_base=self.webpackChunkpos_base||[]).push([[453],{305:(e,s,a)=>{a.r(s),a.d(s,{default:()=>p.Z});var p=a(9189)}}]);
