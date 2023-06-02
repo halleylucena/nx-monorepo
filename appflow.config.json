@@ -1,0 +1,10 @@
+{
+    "apps": [
+        {
+            "appId": "pt.vendus.posHost",
+            "root": "apps/pos-host",
+            "dependencyInstallCommand": "npm install && cd ../../ && npm install",
+            "webBuildCommand": "cd ../../ && npx nx build pos-host"
+        }
+    ]
+}
